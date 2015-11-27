@@ -1,0 +1,57 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">  
+<link rel="stylesheet" type="text/css" href="jquery.qpopover.css" />
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+<script type="text/javascript"  src="jquery-1.10.2.js" ></script>
+<script type="text/javascript"  src="jquery.qpopover.js" ></script>
+
+<script>
+
+$(document).ready(
+	function()
+	{
+		$("#user1").qpopover({poppanel:$("#messagebox"),data:{content:"你的字段错了!"}});
+		
+		$("#btn").click(
+			function()
+			{
+				$("#user1").qpopover("show");
+			}
+		);
+		
+	}
+);
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+dddddddddddddddddddd<input type="text"  id="user1"    />
+
+
+<div id="messagebox" style="width:300px;height:300px;display:none;">
+				 <div class="panel panel-default">
+						  <div class="panel-heading">
+							<h3 class="panel-title">提示</h3>
+						  </div>
+						  <div class="panel-body">
+							{content}
+						  </div>
+				 </div>
+</div>
+
+<input type="button"  id="btn"  value="提示"  />
+
+</body>
+
+</html>
